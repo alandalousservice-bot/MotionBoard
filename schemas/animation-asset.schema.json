@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://motionboard.example/schemas/animation-asset.schema.json",
+  "title": "MotionBoard Animation Asset",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "version", "clipName", "characterId", "characterVersion", "skillFamily", "movement", "assetPath", "format", "durationSeconds", "frameRate", "loop", "rootMotion", "license", "review", "labels"],
+  "properties": {
+    "schemaVersion": {"type": "string", "const": "1.0.0"},
+    "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "version": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+    "clipName": {"enum": ["walk_cycle", "run_cycle", "jump_two_foot"]},
+    "characterId": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "characterVersion": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+    "skillFamily": {"enum": ["locomotion", "jumping"]},
+    "movement": {"enum": ["walking", "running", "two-foot jumping"]},
+    "assetPath": {"type": "string", "pattern": "^assets/animations/.+\\.glb$"},
+    "format": {"type": "string", "const": "glTF 2.0 binary"},
+    "durationSeconds": {"type": "number", "exclusiveMinimum": 0},
+    "frameRate": {"type": "number", "exclusiveMinimum": 0},
+    "loop": {"type": "boolean"},
+    "rootMotion": {"enum": ["in-place", "traveling"]},
+    "forwardAxis": {"type": "string", "const": "+Y"},
+    "labels": {
+      "type": "object", "additionalProperties": false,
+      "required": ["ar"],
+      "properties": {
+        "ar": {"type": "string", "minLength": 1},
+        "fr": {"type": "string"},
+        "en": {"type": "string"}
+      }
+    },
+    "instructionCues": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "ar": {"type": "array", "items": {"type": "string"}},
+        "fr": {"type": "array", "items": {"type": "string"}},
+        "en": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "ageRange": {
+      "type": "object", "additionalProperties": false,
+      "required": ["min", "max"],
+      "properties": {"min": {"type": "integer", "minimum": 5}, "max": {"type": "integer", "minimum": 5}}
+    },
+    "license": {"$ref": "#/$defs/license"},
+    "review": {
+      "type": "object", "additionalProperties": false,
+      "required": ["technical", "pedagogical"],
+      "properties": {
+        "technical": {"$ref": "#/$defs/reviewRecord"},
+        "pedagogical": {"$ref": "#/$defs/reviewRecord"}
+      }
+    }
+  },
+  "allOf": [
+    {"if": {"properties": {"clipName": {"const": "walk_cycle"}}, "required": ["clipName"]}, "then": {"properties": {"movement": {"const": "walking"}, "skillFamily": {"const": "locomotion"}}}},
+    {"if": {"properties": {"clipName": {"const": "run_cycle"}}, "required": ["clipName"]}, "then": {"properties": {"movement": {"const": "running"}, "skillFamily": {"const": "locomotion"}}}},
+    {"if": {"properties": {"clipName": {"const": "jump_two_foot"}}, "required": ["clipName"]}, "then": {"properties": {"movement": {"const": "two-foot jumping"}, "skillFamily": {"const": "jumping"}}}}
+  ],
+  "$defs": {
+    "license": {
+      "type": "object", "additionalProperties": false,
+      "required": ["status", "sources"],
+      "properties": {
+        "status": {"enum": ["pending", "cleared", "blocked"]},
+        "sources": {"type": "array", "items": {"$ref": "#/$defs/source"}}
+      }
+    },
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["name", "sourceUrl", "license", "redistributionAllowed", "webEmbeddingAllowed", "verifiedOn"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "creator": {"type": "string"},
+        "sourceUrl": {"type": "string", "format": "uri"},
+        "license": {"type": "string", "minLength": 1},
+        "attribution": {"type": "string"},
+        "modifications": {"type": "string"},
+        "redistributionAllowed": {"type": "boolean"},
+        "webEmbeddingAllowed": {"type": "boolean"},
+        "commercialUseAllowed": {"type": "boolean"},
+        "verifiedOn": {"type": "string", "format": "date"}
+      }
+    },
+    "reviewRecord": {
+      "type": "object", "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": {"enum": ["pending", "approved", "changes-requested", "rejected"]},
+        "reviewer": {"type": "string"},
+        "role": {"type": "string"},
+        "date": {"type": "string", "format": "date"},
+        "notes": {"type": "string"}
+      }
+    }
+  }
+}

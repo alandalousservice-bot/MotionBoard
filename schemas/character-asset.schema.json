@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://motionboard.example/schemas/character-asset.schema.json",
+  "title": "MotionBoard Character Asset",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "version", "assetPath", "format", "rig", "license", "review"],
+  "properties": {
+    "schemaVersion": {"type": "string", "const": "1.0.0"},
+    "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "version": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+    "assetPath": {"type": "string", "pattern": "^assets/characters/.+\\.glb$"},
+    "sourcePath": {"type": "string", "pattern": "^assets/characters/.+\\.blend$"},
+    "format": {"type": "string", "const": "glTF 2.0 binary"},
+    "units": {"type": "string", "const": "meters"},
+    "axes": {
+      "type": "object", "additionalProperties": false,
+      "required": ["up", "forward"],
+      "properties": {"up": {"const": "+Z"}, "forward": {"const": "+Y"}}
+    },
+    "rig": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "version", "restPose"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+        "version": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+        "restPose": {"type": "string", "const": "A-pose"},
+        "boneMap": {"type": "string"}
+      }
+    },
+    "visual": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "description": {"type": "string"},
+        "flagReference": {"type": "string", "format": "uri"},
+        "flagReviewed": {"type": "boolean"}
+      }
+    },
+    "license": {"$ref": "#/$defs/license"},
+    "review": {"$ref": "#/$defs/review"}
+  },
+  "$defs": {
+    "license": {
+      "type": "object", "additionalProperties": false,
+      "required": ["status", "sources"],
+      "properties": {
+        "status": {"enum": ["pending", "cleared", "blocked"]},
+        "sources": {"type": "array", "items": {"$ref": "#/$defs/source"}}
+      }
+    },
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["name", "sourceUrl", "license", "redistributionAllowed", "webEmbeddingAllowed", "verifiedOn"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "creator": {"type": "string"},
+        "sourceUrl": {"type": "string", "format": "uri"},
+        "license": {"type": "string", "minLength": 1},
+        "attribution": {"type": "string"},
+        "modifications": {"type": "string"},
+        "redistributionAllowed": {"type": "boolean"},
+        "webEmbeddingAllowed": {"type": "boolean"},
+        "commercialUseAllowed": {"type": "boolean"},
+        "verifiedOn": {"type": "string", "format": "date"}
+      }
+    },
+    "reviewRecord": {
+      "type": "object", "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": {"enum": ["pending", "approved", "changes-requested", "rejected"]},
+        "reviewer": {"type": "string"},
+        "role": {"type": "string"},
+        "date": {"type": "string", "format": "date"},
+        "notes": {"type": "string"}
+      }
+    },
+    "review": {
+      "type": "object", "additionalProperties": false,
+      "required": ["technical"],
+      "properties": {"technical": {"$ref": "#/$defs/reviewRecord"}}
+    }
+  }
+}
