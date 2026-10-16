@@ -1,0 +1,332 @@
+{
+  "blender": "5.2.2 LTS",
+  "mesh": "MB004B 02 96-107 mesh \u2014 exploratory only",
+  "boundary_edge_total": 784,
+  "boundary_loop_total": 28,
+  "boundary_loops_by_zone": {
+    "foot/toe": 1,
+    "head/face": 23,
+    "pelvis/thigh": 1,
+    "torso/arm-root": 3
+  },
+  "boundary_edges_by_zone": {
+    "foot/toe": 36,
+    "head/face": 654,
+    "pelvis/thigh": 34,
+    "torso/arm-root": 60
+  },
+  "largest_boundary_loops": [
+    {
+      "zone": "head/face",
+      "edges": 38,
+      "vertices": 38,
+      "center": [
+        0.0,
+        -0.1222,
+        1.4942
+      ]
+    },
+    {
+      "zone": "head/face",
+      "edges": 38,
+      "vertices": 38,
+      "center": [
+        0.0,
+        -0.1176,
+        1.4707
+      ]
+    },
+    {
+      "zone": "torso/arm-root",
+      "edges": 36,
+      "vertices": 36,
+      "center": [
+        0.0,
+        -0.041,
+        0.9862
+      ]
+    },
+    {
+      "zone": "foot/toe",
+      "edges": 36,
+      "vertices": 36,
+      "center": [
+        0.0,
+        -0.0124,
+        0.1054
+      ]
+    },
+    {
+      "zone": "pelvis/thigh",
+      "edges": 34,
+      "vertices": 34,
+      "center": [
+        0.0,
+        -0.0872,
+        0.7916
+      ]
+    },
+    {
+      "zone": "head/face",
+      "edges": 32,
+      "vertices": 32,
+      "center": [
+        0.0577,
+        -0.1064,
+        1.421
+      ]
+    },
+    {
+      "zone": "head/face",
+      "edges": 32,
+      "vertices": 32,
+      "center": [
+        0.0822,
+        -0.0828,
+        1.4215
+      ]
+    },
+    {
+      "zone": "head/face",
+      "edges": 32,
+      "vertices": 32,
+      "center": [
+        0.0828,
+        0.0195,
+        1.4074
+      ]
+    },
+    {
+      "zone": "head/face",
+      "edges": 32,
+      "vertices": 32,
+      "center": [
+        0.0137,
+        0.0427,
+        1.4065
+      ]
+    },
+    {
+      "zone": "head/face",
+      "edges": 32,
+      "vertices": 32,
+      "center": [
+        0.0473,
+        0.038,
+        1.4079
+      ]
+    },
+    {
+      "zone": "head/face",
+      "edges": 32,
+      "vertices": 32,
+      "center": [
+        -0.0577,
+        -0.1064,
+        1.421
+      ]
+    },
+    {
+      "zone": "head/face",
+      "edges": 32,
+      "vertices": 32,
+      "center": [
+        -0.0822,
+        -0.0828,
+        1.4215
+      ]
+    },
+    {
+      "zone": "head/face",
+      "edges": 32,
+      "vertices": 32,
+      "center": [
+        -0.0828,
+        0.0195,
+        1.4074
+      ]
+    },
+    {
+      "zone": "head/face",
+      "edges": 32,
+      "vertices": 32,
+      "center": [
+        -0.0137,
+        0.0427,
+        1.4065
+      ]
+    },
+    {
+      "zone": "head/face",
+      "edges": 32,
+      "vertices": 32,
+      "center": [
+        -0.0473,
+        0.038,
+        1.4079
+      ]
+    },
+    {
+      "zone": "head/face",
+      "edges": 32,
+      "vertices": 32,
+      "center": [
+        0.0334,
+        -0.1391,
+        1.5477
+      ]
+    },
+    {
+      "zone": "head/face",
+      "edges": 32,
+      "vertices": 32,
+      "center": [
+        -0.0334,
+        -0.1391,
+        1.5477
+      ]
+    },
+    {
+      "zone": "head/face",
+      "edges": 30,
+      "vertices": 30,
+      "center": [
+        0.0324,
+        -0.1385,
+        1.5408
+      ]
+    },
+    {
+      "zone": "head/face",
+      "edges": 30,
+      "vertices": 30,
+      "center": [
+        -0.0324,
+        -0.1385,
+        1.5408
+      ]
+    },
+    {
+      "zone": "head/face",
+      "edges": 26,
+      "vertices": 26,
+      "center": [
+        0.0,
+        -0.0202,
+        1.4289
+      ]
+    }
+  ],
+  "influence_vertices_by_count": {
+    "4": 6290,
+    "5": 4225,
+    "6": 2266,
+    "3": 1534,
+    "7": 1722,
+    "8": 1299,
+    "10": 987,
+    "9": 758,
+    "11": 77
+  },
+  "vertices_over_four_influences": 11334,
+  "maximum_dropped_weight_per_vertex": 0.205854,
+  "mean_dropped_weight_per_overlimit_vertex": 0.061869,
+  "pose_tests": [
+    {
+      "joint": "shoulder",
+      "bone": "upperarm02.L",
+      "radians": 0.45,
+      "max_vertex_displacement_m": 0.121888,
+      "changed_vertices_gt_1mm": 2156,
+      "top_four_skinning_max_vertex_difference_m": 0.005805,
+      "top_four_skinning_mean_vertex_difference_m": 2e-05,
+      "result": "PASS"
+    },
+    {
+      "joint": "elbow",
+      "bone": "lowerarm02.L",
+      "radians": 0.65,
+      "max_vertex_displacement_m": 0.144479,
+      "changed_vertices_gt_1mm": 1768,
+      "top_four_skinning_max_vertex_difference_m": 0.015195,
+      "top_four_skinning_mean_vertex_difference_m": 3.4e-05,
+      "result": "PASS"
+    },
+    {
+      "joint": "wrist",
+      "bone": "wrist.L",
+      "radians": 0.35,
+      "max_vertex_displacement_m": 0.025352,
+      "changed_vertices_gt_1mm": 1631,
+      "top_four_skinning_max_vertex_difference_m": 0.001761,
+      "top_four_skinning_mean_vertex_difference_m": 5e-06,
+      "result": "PASS"
+    },
+    {
+      "joint": "hip",
+      "bone": "upperleg02.L",
+      "radians": 0.35,
+      "max_vertex_displacement_m": 0.055513,
+      "changed_vertices_gt_1mm": 1637,
+      "top_four_skinning_max_vertex_difference_m": 0.004529,
+      "top_four_skinning_mean_vertex_difference_m": 1.4e-05,
+      "result": "PASS"
+    },
+    {
+      "joint": "knee",
+      "bone": "lowerleg02.L",
+      "radians": 0.55,
+      "max_vertex_displacement_m": 0.123134,
+      "changed_vertices_gt_1mm": 1282,
+      "top_four_skinning_max_vertex_difference_m": 0.012559,
+      "top_four_skinning_mean_vertex_difference_m": 4.1e-05,
+      "result": "PASS"
+    },
+    {
+      "joint": "ankle",
+      "bone": "foot.L",
+      "radians": 0.35,
+      "max_vertex_displacement_m": 0.022824,
+      "changed_vertices_gt_1mm": 1169,
+      "top_four_skinning_max_vertex_difference_m": 0.003924,
+      "top_four_skinning_mean_vertex_difference_m": 1.3e-05,
+      "result": "PASS"
+    },
+    {
+      "joint": "finger",
+      "bone": "finger2-1.L",
+      "radians": 0.5,
+      "max_vertex_displacement_m": 0.029366,
+      "changed_vertices_gt_1mm": 301,
+      "top_four_skinning_max_vertex_difference_m": 0.001419,
+      "top_four_skinning_mean_vertex_difference_m": 1e-06,
+      "result": "PASS"
+    },
+    {
+      "joint": "thumb",
+      "bone": "finger1-1.L",
+      "radians": 0.45,
+      "max_vertex_displacement_m": 0.031858,
+      "changed_vertices_gt_1mm": 220,
+      "top_four_skinning_max_vertex_difference_m": 0.002013,
+      "top_four_skinning_mean_vertex_difference_m": 4e-06,
+      "result": "PASS"
+    }
+  ],
+  "glb_size_bytes": 7632716,
+  "glb_roundtrip_new_objects": [
+    "MB004B 02 96-107 armature \u2014 exploratory only.001",
+    "MB004B 02 96-107 mesh \u2014 exploratory only.001",
+    "Icosphere"
+  ],
+  "clips": [
+    {
+      "name": "MB004B_RIG_TEST_NOT_EDUCATIONAL",
+      "frame_range": [
+        1.0,
+        105.0
+      ]
+    }
+  ],
+  "pose_test_source": "mb004b-candidate-02-rig-test.blend"
+}

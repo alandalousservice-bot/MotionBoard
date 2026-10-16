@@ -51,7 +51,7 @@ npm test
 npm run build
 ```
 
-The tests cover Draft 2020-12 schema compilation, metadata parsing, playback state/speed/loop/restart, disposal, toolbar actions, camera-pad actions, and empty/local-file UI states. Also check the responsive layout in a desktop and narrow/mobile viewport, then import an appropriately licensed local GLB to check orbit, zoom, reset, clip selection, and WebGL behavior. This repository contains no GLB, so no model-specific browser check or pedagogical review can be claimed from the included tests. A successful build or a technically valid file does not certify movement quality.
+The tests cover Draft 2020-12 schema compilation, metadata parsing, playback state/speed/loop/restart, disposal, toolbar actions, camera-pad actions, and empty/local-file UI states. Also check the responsive layout in a desktop and narrow/mobile viewport, then import an appropriately licensed local GLB to check orbit, zoom, reset, clip selection, and WebGL behavior. The MB-004B MPFB2 rig probe supports technical browser loading and deformation checks only; it is not the approved MotionBoard character and its test clip is not educational. A successful build or a technically valid file does not certify movement quality.
 
 See [the MB-002 verification report](docs/MB-002_VERIFICATION.md) for the current run results and limitations.
 
@@ -70,9 +70,10 @@ The GLB is included in the development-only test selector with `npm run dev` →
 - [Animation quality and acceptance](docs/ANIMATION_QUALITY.md)
 - [Integration plan](docs/INTEGRATION_PLAN.md)
 - [Development conventions](AGENTS.md)
+- [MB-004B child proportion and rig feasibility](docs/MB-004B_VERIFICATION.md)
 
 ## Local animated GLB test fixtures
 
-For repeatable development-only browser checks, this branch includes attributed fixtures under `assets/test-only/`: RobotExpressive (CC0 1.0), Khronos Fox (model CC0; rigging and animation CC BY 4.0), and Khronos RiggedSimple (CC BY 4.0). Start Vite and open `http://127.0.0.1:4173/?testAsset=robot-expressive`, `?testAsset=fox`, or `?testAsset=rigged-simple`. The dev-only fixture selector replaces the model in place; the query bootstrap and selector are omitted from production. Source credits, licenses, checksums, clip names and durations are recorded in [the fixture README](assets/test-only/README.md). These samples are technical only and are not approved educational movements or the MotionBoard schoolboy.
+For repeatable development-only browser checks, this branch includes attributed fixtures under `assets/test-only/`: RobotExpressive (CC0 1.0), Khronos Fox (model CC0; rigging and animation CC BY 4.0), Khronos RiggedSimple (CC BY 4.0), and an MPFB2 rig probe (core asset CC0; test clip is non-educational). Start Vite and open `http://127.0.0.1:4173/?testAsset=robot-expressive`, `?testAsset=fox`, `?testAsset=rigged-simple`, or `?testAsset=mpfb2-rig-probe`. The dev-only fixture selector replaces the model in place; the query bootstrap and selector are omitted from production. Source credits, licenses, checksums, clip names and durations are recorded in [the fixture README](assets/test-only/README.md). These samples are technical only and are not approved educational movements or the MotionBoard schoolboy.
 
 Run `npm run validate` for the Draft 2020-12 schema checks (`npm run validate:schemas` remains available as an explicit alias).

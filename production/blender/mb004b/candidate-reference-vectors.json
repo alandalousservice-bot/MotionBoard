@@ -1,0 +1,38 @@
+[
+  {
+    "label": "7-year-band reference vector",
+    "age_band_months": "84-95",
+    "sample_stature_m": 1.278,
+    "head_height_ratio": 0.1495,
+    "sitting_height_ratio": 0.5469,
+    "shoulder_breadth_ratio": 0.2457,
+    "upper_arm_ratio": 0.2081,
+    "elbow_hand_ratio": 0.2613,
+    "hand_length_ratio": 0.1072,
+    "foot_length_ratio": 0.1557
+  },
+  {
+    "label": "8-year-band reference vector",
+    "age_band_months": "96-107",
+    "sample_stature_m": 1.292,
+    "head_height_ratio": 0.144,
+    "sitting_height_ratio": 0.5333,
+    "shoulder_breadth_ratio": 0.2446,
+    "upper_arm_ratio": 0.2051,
+    "elbow_hand_ratio": 0.2655,
+    "hand_length_ratio": 0.1068,
+    "foot_length_ratio": 0.1563
+  },
+  {
+    "label": "9-year-band reference vector",
+    "age_band_months": "108-119",
+    "sample_stature_m": 1.394,
+    "head_height_ratio": 0.1399,
+    "sitting_height_ratio": 0.5287,
+    "shoulder_breadth_ratio": 0.2346,
+    "upper_arm_ratio": 0.2052,
+    "elbow_hand_ratio": 0.269,
+    "hand_length_ratio": 0.1098,
+    "foot_length_ratio": 0.16
+  }
+]

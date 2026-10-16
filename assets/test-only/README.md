@@ -35,3 +35,10 @@ These are unmodified, licensed technical fixtures for MotionBoard's local GLB vi
 - Clip: `animation_0` 2.0833 s (source clip unnamed; loader assigns this name).
 
 Durations are the maximum key times from each clip's input accessors. They describe file data only, not movement quality. The files are unmodified and are retained with source/license attribution for reproducible technical tests.
+
+## mb004b-rig-probe.glb — MotionBoard MPFB2 rig deformation probe
+
+- Source workflow: MPFB2 2.0.18 built-in hm08 child-anchor mesh and standard rig, based on the editable MPFB2 feasibility source under `production/blender/mpfb2-feasibility/`.
+- License/provenance: MPFB2's official asset license identifies its core human graphics assets as CC0 1.0; add-on code is GPL-3.0-or-later. This GLB contains a technical test mesh and a single scripted joint-articulation action authored for this feasibility check. It is not a final MotionBoard character or educational animation.
+- Test clip: `MB004B_RIG_TEST_NOT_EDUCATIONAL`, frames 1–105 at 30 fps (approximately 3.47 s). It poses shoulder, elbow, wrist, hip, knee, ankle, finger and thumb one at a time. It exists only to check loading/skinning and is not pedagogically reviewed.
+- Browser development route: `?testAsset=mpfb2-rig-probe` (development server only).
