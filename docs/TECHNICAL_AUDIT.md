@@ -1,7 +1,7 @@
 # Technical audit
 
-**Audit date:** 2026-10-16 (Africa/Lagos)  
-**Repository state at audit:** empty directory; Git initialized for this work on `mb-001/project-foundation`.  
+**Audit date:** 2026-10-16 (Africa/Lagos)
+**Repository state at audit:** empty directory; Git initialized for this work on `mb-001/project-foundation`.
 **Scope:** Blender, MPFB2, Rokoko Blender integration, Three.js, React Three Fiber, licensing, runtime compatibility, and cost. This is a documentation-based compatibility audit; no software was installed and no integration smoke test was run.
 
 ## Repository and asset inventory
