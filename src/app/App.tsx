@@ -7,7 +7,21 @@ import type { LoadedCharacter, LoadState, MotionMetadata } from '../features/vie
 
 const Viewer = lazy(() => import('../features/viewer/Viewer').then((module) => ({ default: module.Viewer })));
 
+const TEST_ASSET_PATHS = {
+  fox: '/assets/test-only/Fox.glb',
+  'rigged-simple': '/assets/test-only/RiggedSimple.glb',
+  'robot-expressive': '/assets/test-only/RobotExpressive.glb',
+} as const;
+type TestAssetName = keyof typeof TEST_ASSET_PATHS;
+
+function readTestAssetQuery(): TestAssetName | null {
+  if (!import.meta.env.DEV) return null;
+  const value = new URLSearchParams(window.location.search).get('testAsset');
+  return value && Object.hasOwn(TEST_ASSET_PATHS, value) ? value as TestAssetName : null;
+}
+
 export function App() {
+  const [testAsset, setTestAsset] = useState<TestAssetName | null>(readTestAssetQuery);
   const [glbFile, setGlbFile] = useState<File | null>(null);
   const [metadataFile, setMetadataFile] = useState<File | null>(null);
   const [asset, setAsset] = useState<LoadedCharacter | null>(null);
@@ -25,6 +39,27 @@ export function App() {
     left: () => undefined, right: () => undefined, up: () => undefined,
     down: () => undefined, zoomIn: () => undefined, zoomOut: () => undefined,
   });
+
+  useEffect(() => {
+    if (!testAsset) return;
+    const assetPath = TEST_ASSET_PATHS[testAsset];
+
+    let cancelled = false;
+    void fetch(assetPath)
+      .then((response) => {
+        if (!response.ok) throw new Error(`Test asset request failed (${response.status}).`);
+        return response.blob();
+      })
+      .then((blob) => {
+        if (!cancelled) setGlbFile(new File([blob], assetPath.split('/').at(-1)!, { type: 'model/gltf-binary' }));
+      })
+      .catch((error: unknown) => {
+        if (cancelled) return;
+        setLoadError(error instanceof Error ? error.message : 'تعذر تحميل أصل الاختبار.');
+        setLoadState('error');
+      });
+    return () => { cancelled = true; };
+  }, [testAsset]);
 
   useEffect(() => {
     if (!glbFile) {
@@ -215,6 +250,16 @@ export function App() {
               <span aria-hidden="true">＋</span> استيراد ملف GLB محلياً
             </label>
             <input id="glb-picker" className="visually-hidden" type="file" accept=".glb,model/gltf-binary" onChange={onGlbChange} aria-label="اختيار ملف GLB من الجهاز" />
+            {import.meta.env.DEV && testAsset && (
+              <label className="test-asset-picker">
+                <span>أصل اختبار تقني (للتطوير فقط)</span>
+                <select aria-label="تبديل أصل الاختبار التقني" value={testAsset} onChange={(event) => setTestAsset(event.currentTarget.value as TestAssetName)}>
+                  <option value="robot-expressive">RobotExpressive.glb</option>
+                  <option value="fox">Fox.glb</option>
+                  <option value="rigged-simple">RiggedSimple.glb</option>
+                </select>
+              </label>
+            )}
             <p className="local-only-note"><span aria-hidden="true">⌑</span> يبقى الملف على جهازك ولا يتم رفعه إلى خادم.</p>
             {asset && (
               <div className="loaded-file" title={asset.fileName}>

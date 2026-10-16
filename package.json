@@ -9,6 +9,7 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
+    "validate": "npm run validate:schemas",
     "validate:schemas": "vitest run src/features/viewer/__tests__/schemas.test.ts"
   },
   "dependencies": {

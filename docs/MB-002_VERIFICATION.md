@@ -1,6 +1,6 @@
 # MB-002 verification report
 
-**Date:** 2026-10-16 (Africa/Lagos)  
+**Date:** 2026-10-16 (Africa/Algiers)
 **Branch:** `mb-002/interactive-viewer`  
 **Foundation start:** `05ce09ff3be63ead3ee15ed6d35044ebf5187826` (`mb-001/project-foundation`, published to `origin`)  
 **End commit:** see the branch tip for this report revision.

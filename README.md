@@ -4,7 +4,7 @@ Standalone, display-only 3D motor-skills gallery for Algerian primary physical e
 
 ## Current status
 
-The repository now contains a standalone React/TypeScript 3D viewer. There is no character, rig, animation, or licensed test asset included. Walking, running, and two-foot jumping remain acceptance targets, not completed content. The demo starts empty and can open a self-contained GLB from the user's device for technical preview. Imported files are processed locally and are always marked as unapproved in the UI.
+The repository contains a standalone React/TypeScript 3D viewer. It includes only clearly labeled, licensed technical test fixtures under `assets/test-only/`; these are not MotionBoard characters or approved educational movements. Walking, running, and two-foot jumping remain acceptance targets, not completed content. The demo starts empty and can open a self-contained GLB from the user's device for technical preview. Imported files are processed locally and are always marked as unapproved in the UI.
 
 Full character and animation production remains gated on review and approval of [the technical audit](docs/TECHNICAL_AUDIT.md).
 
@@ -64,3 +64,9 @@ See [the MB-002 verification report](docs/MB-002_VERIFICATION.md) for the curren
 - [Animation quality and acceptance](docs/ANIMATION_QUALITY.md)
 - [Integration plan](docs/INTEGRATION_PLAN.md)
 - [Development conventions](AGENTS.md)
+
+## Local animated GLB test fixtures
+
+For repeatable development-only browser checks, this branch includes attributed fixtures under `assets/test-only/`: RobotExpressive (CC0 1.0), Khronos Fox (model CC0; rigging and animation CC BY 4.0), and Khronos RiggedSimple (CC BY 4.0). Start Vite and open `http://127.0.0.1:4173/?testAsset=robot-expressive`, `?testAsset=fox`, or `?testAsset=rigged-simple`. The dev-only fixture selector replaces the model in place; the query bootstrap and selector are omitted from production. Source credits, licenses, checksums, clip names and durations are recorded in [the fixture README](assets/test-only/README.md). These samples are technical only and are not approved educational movements or the MotionBoard schoolboy.
+
+Run `npm run validate` for the Draft 2020-12 schema checks (`npm run validate:schemas` remains available as an explicit alias).

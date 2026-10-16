@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import {
   Box3,
-  Group,
+  SkinnedMesh,
   Vector3,
   type AnimationClip,
   type Object3D,
@@ -38,7 +38,7 @@ export function Viewer({ asset, clip, playing, loop, speed, restartRevision, onR
       camera={{ position: [3.4, 2.3, 4.2], fov: 34, near: 0.1, far: 80 }}
       dpr={[1, 1.75]}
       gl={{ antialias: true, alpha: false, powerPreference: 'low-power' }}
-      shadows
+      shadows="percentage"
       fallback={<div className="canvas-fallback">تعذر تشغيل العرض ثلاثي الأبعاد في هذا المتصفح.</div>}
     >
       <color attach="background" args={['#152a29']} />
@@ -115,23 +115,30 @@ function CameraOrbitControls({
 }
 
 function FramedCharacter({ scene }: { scene: Object3D }) {
-  const framedRoot = useMemo(() => {
-    const group = new Group();
-    group.add(scene);
+  const frame = useMemo(() => {
+    scene.updateMatrixWorld(true);
+    scene.traverse((object) => { if (object instanceof SkinnedMesh) object.skeleton.update(); });
+    // Skinning can move source vertices far from their bind-pose box. Use
+    // precise skinned positions so camera framing tracks the visible model.
+    const bounds = new Box3().setFromObject(scene, true);
+    if (bounds.isEmpty()) return { scale: 1, position: [0, 0, 0] as const };
 
-    const bounds = new Box3().setFromObject(scene);
-    if (!bounds.isEmpty()) {
-      const size = bounds.getSize(new Vector3());
-      const center = bounds.getCenter(new Vector3());
-      const largestDimension = Math.max(size.x, size.y, size.z, 0.001);
-      const scale = 1.85 / largestDimension;
-      group.scale.setScalar(scale);
-      group.position.set(-center.x * scale, -bounds.min.y * scale, -center.z * scale);
-    }
-    return group;
+    const size = bounds.getSize(new Vector3());
+    const center = bounds.getCenter(new Vector3());
+    const scale = 1.85 / Math.max(size.x, size.y, size.z, 0.001);
+    return {
+      scale,
+      position: [-center.x * scale, -bounds.min.y * scale, -center.z * scale] as const,
+    };
   }, [scene]);
 
-  return <primitive object={framedRoot} />;
+  // Let R3F own the scene-parent change declaratively. Mutating scene parents
+  // from useMemo breaks React StrictMode's development double render.
+  return (
+    <group position={frame.position} scale={frame.scale} dispose={null}>
+      <primitive object={scene} dispose={null} />
+    </group>
+  );
 }
 
 function AnimatedClip({
