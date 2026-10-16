@@ -4,7 +4,7 @@ Standalone, display-only 3D motor-skills gallery for Algerian primary physical e
 
 ## Current status
 
-The repository contains a standalone React/TypeScript 3D viewer. It includes only clearly labeled, licensed technical test fixtures under `assets/test-only/`; these are not MotionBoard characters or approved educational movements. Walking, running, and two-foot jumping remain acceptance targets, not completed content. The demo starts empty and can open a self-contained GLB from the user's device for technical preview. Imported files are processed locally and are always marked as unapproved in the UI.
+The repository contains a standalone React/TypeScript 3D viewer and the first original canonical schoolboy prototype (`schoolboy-v0.1.0`). The character is a real editable Blender model with a humanoid rig and GLB export, but remains a draft awaiting Product Owner visual and rig review. It has no animation clips and is not a pedagogically approved asset. Walking, running, and two-foot jumping remain acceptance targets, not completed content. The demo starts empty and can open a self-contained GLB from the user's device for technical preview. Imported files are processed locally and are always marked as unapproved in the UI.
 
 Full character and animation production remains gated on review and approval of [the technical audit](docs/TECHNICAL_AUDIT.md).
 
@@ -54,6 +54,12 @@ npm run build
 The tests cover Draft 2020-12 schema compilation, metadata parsing, playback state/speed/loop/restart, disposal, toolbar actions, camera-pad actions, and empty/local-file UI states. Also check the responsive layout in a desktop and narrow/mobile viewport, then import an appropriately licensed local GLB to check orbit, zoom, reset, clip selection, and WebGL behavior. This repository contains no GLB, so no model-specific browser check or pedagogical review can be claimed from the included tests. A successful build or a technically valid file does not certify movement quality.
 
 See [the MB-002 verification report](docs/MB-002_VERIFICATION.md) for the current run results and limitations.
+
+## Canonical schoolboy prototype
+
+The MB-003B source is `production/blender/schoolboy-v0.1.0.blend`; the reproducible model/export script is `production/blender/build_schoolboy.py`. On the Microsoft Store Blender package, run `production/blender/run_store_blender.ps1`; with Blender installed conventionally, run `blender --background --python production/blender/build_schoolboy.py`. The script saves a Blender source, exports `assets/characters/schoolboy-v0.1.0.glb`, and renders front, side, rear, three-quarter, and non-educational rig-test previews under `assets/previews/`.
+
+The GLB is included in the development-only test selector with `npm run dev` → `http://127.0.0.1:4173/?testAsset=schoolboy`. It is static by design: no walking, running, jumping, or other motion clips were authored. See [the MB-003B verification report](docs/MB-003B_VERIFICATION.md) for Blender, rig, geometry, browser validation, provenance, and pending-review limits.
 
 ## Key documents
 

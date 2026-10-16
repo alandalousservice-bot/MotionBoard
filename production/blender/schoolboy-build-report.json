@@ -1,0 +1,71 @@
+{
+  "asset_id": "schoolboy-primary",
+  "version": "0.1.0",
+  "blender_version": "5.2.2 LTS",
+  "blend_file": "production/blender/schoolboy-v0.1.0.blend",
+  "blend_bytes": 2298175,
+  "glb_file": "assets/characters/schoolboy-v0.1.0.glb",
+  "rig_bones": [
+    "root",
+    "pelvis",
+    "spine",
+    "chest",
+    "neck",
+    "head",
+    "clavicle.L",
+    "upper_arm.L",
+    "forearm.L",
+    "hand.L",
+    "clavicle.R",
+    "upper_arm.R",
+    "forearm.R",
+    "hand.R",
+    "thigh.L",
+    "shin.L",
+    "foot.L",
+    "thigh.R",
+    "shin.R",
+    "foot.R"
+  ],
+  "mesh_statistics": {
+    "mesh_objects": 47,
+    "vertices": 57424,
+    "triangles": 114332,
+    "material_slots": 48,
+    "height_m": 1.44,
+    "texture_images": 0
+  },
+  "glb_validation": {
+    "glb_bytes": 3416500,
+    "mesh_count": 47,
+    "node_count": 68,
+    "skin_count": 1,
+    "animation_count": 0,
+    "joint_count": 20,
+    "materials": [
+      "Uniform \u2022 Algeria red",
+      "Uniform \u2022 Algeria green",
+      "Uniform \u2022 soft white",
+      "Eyes \u2022 glint",
+      "Eyes \u2022 warm white",
+      "Hair \u2022 dark chestnut",
+      "Eyes \u2022 hazel",
+      "Eyes \u2022 pupil",
+      "Uniform \u2022 white shorts",
+      "Skin \u2022 warm peach",
+      "Shoes \u2022 laces",
+      "Shoes \u2022 green sole",
+      "Shoes \u2022 white leather"
+    ],
+    "accessor_count": 256
+  },
+  "preview_files": [
+    "assets/previews/schoolboy-front.png",
+    "assets/previews/schoolboy-rear.png",
+    "assets/previews/schoolboy-rig-test.png",
+    "assets/previews/schoolboy-side.png",
+    "assets/previews/schoolboy-three-quarter.png"
+  ],
+  "animation_clips": [],
+  "status": "draft-visual-review-pending"
+}
