@@ -30,6 +30,24 @@
         "en": {"type": "string"}
       }
     },
+    "descriptions": {
+      "type": "object", "additionalProperties": false,
+      "required": ["ar"],
+      "properties": {
+        "ar": {"type": "string", "minLength": 1},
+        "fr": {"type": "string"},
+        "en": {"type": "string"}
+      }
+    },
+    "phases": {
+      "type": "object", "additionalProperties": false,
+      "required": ["ar"],
+      "properties": {
+        "ar": {"type": "array", "items": {"$ref": "#/$defs/phase"}},
+        "fr": {"type": "array", "items": {"$ref": "#/$defs/phase"}},
+        "en": {"type": "array", "items": {"$ref": "#/$defs/phase"}}
+      }
+    },
     "instructionCues": {
       "type": "object", "additionalProperties": false,
       "properties": {
@@ -59,6 +77,15 @@
     {"if": {"properties": {"clipName": {"const": "jump_two_foot"}}, "required": ["clipName"]}, "then": {"properties": {"movement": {"const": "two-foot jumping"}, "skillFamily": {"const": "jumping"}}}}
   ],
   "$defs": {
+    "phase": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "title", "description"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+        "title": {"type": "string", "minLength": 1},
+        "description": {"type": "string", "minLength": 1}
+      }
+    },
     "license": {
       "type": "object", "additionalProperties": false,
       "required": ["status", "sources"],

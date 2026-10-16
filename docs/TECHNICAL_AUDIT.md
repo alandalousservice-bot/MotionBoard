@@ -59,3 +59,9 @@ Do not begin full production until an authorized reviewer accepts this audit and
 - [R3F introduction and React compatibility](https://r3f.docs.pmnd.rs/getting-started/introduction), [R3F MIT license](https://github.com/pmndrs/react-three-fiber/blob/master/LICENSE)
 
 Recheck versions, plans, and terms immediately before tool selection or asset acquisition.
+
+## MB-002 implementation follow-up (2026-10-16)
+
+The standalone viewer foundation has now been implemented on `mb-002/interactive-viewer`. The selected, lockfile-pinned browser stack is React 19.3.1, React Three Fiber 9.8.2, Three.js 0.186.1, TypeScript 5.9.3, and Vite 8.3.4. R3F 9 is paired with React 19 per the compatibility guidance above. Draft 2020-12 schema validation is implemented with Ajv 8.20.0 and `ajv-formats` 3.0.1. The implementation uses a static standalone app and local file selection; it adds no SPEX TECH dependency or backend.
+
+The local demo has no bundled character or animation. A verification run passed typecheck, schema tests, the complete test suite, and production build. The build has a 564.55 kB minified lazy viewer chunk advisory. See `MB-002_VERIFICATION.md` for exact results and the remaining real-asset browser checks. This implementation does not satisfy the production gate above: final content production still requires the technical audit review and approval, as well as the human and technical decisions listed there.

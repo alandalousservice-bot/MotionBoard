@@ -4,9 +4,9 @@ Standalone, display-only 3D motor-skills gallery for Algerian primary physical e
 
 ## Current status
 
-This is a documentation and structure foundation only. There is no character, rig, animation, application runtime, or production asset in the repository. Walking, running, and two-foot jumping are defined as acceptance targets, not completed content. Do not describe them as available until approved assets are checked in or referenced through a verified asset package.
+The repository now contains a standalone React/TypeScript 3D viewer. There is no character, rig, animation, or licensed test asset included. Walking, running, and two-foot jumping remain acceptance targets, not completed content. The demo starts empty and can open a self-contained GLB from the user's device for technical preview. Imported files are processed locally and are always marked as unapproved in the UI.
 
-Full 3D production is gated on review and approval of [the technical audit](docs/TECHNICAL_AUDIT.md).
+Full character and animation production remains gated on review and approval of [the technical audit](docs/TECHNICAL_AUDIT.md).
 
 ## Product boundaries
 
@@ -31,18 +31,29 @@ src/shared/           Future shared UI and runtime primitives
 
 Asset directories are empty until actual licensed and reviewed assets are delivered.
 
-## Development and verification
+## Run locally
 
-No app dependencies or package manager are selected in this foundation commit. Review [the technical audit](docs/TECHNICAL_AUDIT.md), then approve a runtime and dependency lock before implementing the viewer.
+Requirements: Node.js 20.19+ or 22.12+ (Node 24 is also supported by the current toolchain) and npm. The app has no backend or upload service.
 
-For this documentation-only foundation:
+```sh
+npm ci
+npm run dev
+```
 
-1. Confirm the branch is `mb-001/project-foundation` and inspect `git status`.
-2. Validate both schemas with a Draft 2020-12 JSON Schema validator.
-3. Review every official-source link and recheck current versions and terms before adopting a tool or asset.
-4. Follow the manual acceptance checklist in [animation quality](docs/ANIMATION_QUALITY.md) when real assets exist.
+Open the local address printed by Vite. Choose a self-contained `.glb` file from your device to load a model. If it contains animation clips, select one from the clip list. An optional JSON sidecar can provide an Arabic title, description, and movement phases; it must match the selected clip name and validate against `schemas/animation-asset.schema.json`. The sidecar is descriptive only: the interface continues to identify all locally imported material as unapproved.
 
-When a web runtime is approved, add reproducible install/build commands and automated checks in the same change as the app. Do not treat schema validation or a successful build as evidence of pedagogical correctness.
+## Verification
+
+```sh
+npm run typecheck
+npm run validate:schemas
+npm test
+npm run build
+```
+
+The tests cover Draft 2020-12 schema compilation, metadata parsing, playback state/speed/loop/restart, disposal, toolbar actions, camera-pad actions, and empty/local-file UI states. Also check the responsive layout in a desktop and narrow/mobile viewport, then import an appropriately licensed local GLB to check orbit, zoom, reset, clip selection, and WebGL behavior. This repository contains no GLB, so no model-specific browser check or pedagogical review can be claimed from the included tests. A successful build or a technically valid file does not certify movement quality.
+
+See [the MB-002 verification report](docs/MB-002_VERIFICATION.md) for the current run results and limitations.
 
 ## Key documents
 

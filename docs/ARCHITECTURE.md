@@ -12,15 +12,15 @@ Provide a small, standalone browser gallery that loads reviewed 3D content and e
 4. **Content catalog** — versioned JSON metadata that points to approved GLB files. Catalog entries carry technical and pedagogical review states and license provenance.
 5. **Static asset layer** — versioned GLB and optional preview images. No database or media service is required for the initial gallery.
 
-## Proposed stack
+## Selected stack
 
-- React + TypeScript for the UI, after confirming the eventual host's React major version.
-- React Three Fiber (R3F) for scene components if the product remains React-based; use plain Three.js if the viewer must remain framework-neutral or R3F's React peer version cannot match the host.
-- Three.js `GLTFLoader`/`AnimationMixer` for glTF loading and clip playback. These provide the required browser-side primitives for pause, time scaling, and action control.
+- React 19 + TypeScript 5.9 + Vite 8 for the standalone app. Exact versions are pinned in `package.json` and `package-lock.json`.
+- React Three Fiber 9 for the responsive scene, with Three.js 0.186 for `GLTFLoader`, `AnimationMixer`, and `OrbitControls`.
+- Ajv 8 with `ajv-formats` validates optional motion metadata against the Draft 2020-12 schema before display.
 - Native CSS logical properties and `dir="rtl"` for the interface. Keep the model's authored forward axis and camera setup independent of text direction.
-- Static JSON and bundled/CDN assets under a stable versioned path. Start with same-origin assets; consider a CDN only when measured transfer or cache needs justify it.
+- Local `.glb` file selection for the demo. The browser reads the file into memory; it is not transmitted to a server. Optional metadata is also selected locally.
 
-This is a recommendation, not an installed or tested app stack. See `TECHNICAL_AUDIT.md` for version pairing and unresolved checks.
+The runtime remains independent of SPEX TECH. Its use of React Three Fiber 9 is compatible with React 19, as recorded in `TECHNICAL_AUDIT.md`.
 
 ## Component boundaries
 
@@ -37,14 +37,18 @@ AppShell
 
 The UI owns selected skill and accessible labels. The viewer owns renderer, scene, camera, loaded GLTF scene, animation mixer/actions, and disposal. A narrow adapter accepts a validated skill record and emits playback/loader state; it does not know about school records or assessment data.
 
+In this demo the catalog is deliberately empty. The local-file picker exposes animation clips inside an imported GLB without creating a catalog entry. Optional metadata is accepted only when it validates and its `clipName` matches the selected clip. Imported preview material remains visibly unapproved regardless of metadata review fields.
+
 ## Runtime behavior
 
 - Load a catalog record only when it is approved and available for display.
 - Start in a stable three-quarter view, with zoom and orbit bounds that keep the full body visible.
-- Expose discrete play/pause, loop, speed options, and selection controls outside the canvas so they work with keyboard and assistive technology.
-- Handle loading, unsupported asset, context loss, and reduced-motion preference without silently displaying a different clip.
+- Expose discrete play/pause, loop, speed options, clip selection, and keyboard-operable orbit/zoom/reset controls outside the canvas.
+- Handle loading, parse errors, a model without clips, context loss, and reduced-motion preference without silently displaying a different clip.
 - Use one active clip per character by default. Stop previous actions before switching; dispose of mixer and GPU resources when changing or unmounting assets.
 - Keep scene motion deterministic at the selected playback rate. Do not encode UI state or locale into animation files.
+
+User-selected GLB data is read with `GLTFLoader.parseAsync` and kept in client memory. On file replacement or app unmount, stop/uncache mixer actions and dispose the loaded geometry, materials, textures, and `ImageBitmap` sources.
 
 ## Deployment and cost
 
