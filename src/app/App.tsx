@@ -12,6 +12,7 @@ const TEST_ASSET_PATHS = {
   'rigged-simple': '/assets/test-only/RiggedSimple.glb',
   'robot-expressive': '/assets/test-only/RobotExpressive.glb',
   schoolboy: '/assets/characters/schoolboy-v0.1.0.glb',
+  'schoolboy-v020': '/assets/characters/schoolboy-v0.2.0.glb',
 } as const;
 type TestAssetName = keyof typeof TEST_ASSET_PATHS;
 
@@ -259,6 +260,7 @@ export function App() {
                   <option value="fox">Fox.glb</option>
                   <option value="rigged-simple">RiggedSimple.glb</option>
                   <option value="schoolboy">schoolboy-v0.1.0.glb (draft)</option>
+                  <option value="schoolboy-v020">schoolboy-v0.2.0.glb (rejected exploration)</option>
                 </select>
               </label>
             )}
