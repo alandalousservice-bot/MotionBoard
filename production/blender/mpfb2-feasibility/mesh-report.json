@@ -1,0 +1,51 @@
+{
+  "blender_version": "5.2.2 LTS",
+  "mpfb_version": "2.0.18",
+  "created_mesh": "MPFB2 Child Anchor Base Mesh (feasibility only)",
+  "vertices": 19158,
+  "edges": 37364,
+  "faces": 18486,
+  "dimensions": [
+    0.630833625793457,
+    0.25212562084198,
+    1.0053783655166626
+  ],
+  "bbox_min": [
+    -0.49732011556625366,
+    -0.3256400525569916,
+    -0.028380632400512695
+  ],
+  "bbox_max": [
+    0.49732011556625366,
+    0.11034002900123596,
+    1.6661698818206787
+  ],
+  "shape_keys_count": 15,
+  "shape_keys_sample": [
+    "Basis",
+    "$md-$as-$ma-$ch",
+    "$md-$ca-$ma-$ch",
+    "$md-$af-$ma-$ch",
+    "$md-universal-$ma-$ch-min$mu-min$wg",
+    "$md-universal-$ma-$ch-min$mu-$av$wg",
+    "$md-universal-$ma-$ch-$av$mu-min$wg",
+    "$md-$ma-$ch-min$mu-min$wg-min$hg",
+    "$md-$ma-$ch-min$mu-$av$wg-min$hg",
+    "$md-$ma-$ch-$av$mu-min$wg-min$hg",
+    "$md-$fe-$ch-min$mu-min$wg-$avcup-max$fi",
+    "$md-$fe-$ch-min$mu-min$wg-maxcup-$av$fi"
+  ],
+  "vertex_groups": 291,
+  "armatures": [
+    "MPFB2 Child Anchor Base Mesh (feasibility only).rig"
+  ],
+  "rig_result": "{'FINISHED'}",
+  "nonmanifold_edges": 784,
+  "boundary_edges": 784,
+  "wire_edges": 0,
+  "zero_area_faces": 0,
+  "material_slots": 0,
+  "mesh_objects": [
+    "MPFB2 Child Anchor Base Mesh (feasibility only)"
+  ]
+}
