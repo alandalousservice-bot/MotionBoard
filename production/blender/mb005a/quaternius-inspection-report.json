@@ -1,0 +1,644 @@
+{
+  "male": {
+    "meshes": [
+      "Eyebrows",
+      "Eyes",
+      "SuperHero_Male",
+      "Icosphere"
+    ],
+    "mesh_count": 4,
+    "vertices": 8525,
+    "triangles": 14398,
+    "materials": [
+      "MI_Eyes",
+      "MI_Hair_1",
+      "MI_Superhero_Male"
+    ],
+    "material_count": 3,
+    "armature_count": 1,
+    "bones": [
+      "root",
+      "pelvis",
+      "spine_01",
+      "spine_02",
+      "spine_03",
+      "neck_01",
+      "Head",
+      "clavicle_l",
+      "upperarm_l",
+      "lowerarm_l",
+      "hand_l",
+      "index_01_l",
+      "index_02_l",
+      "index_03_l",
+      "index_04_leaf_l",
+      "middle_01_l",
+      "middle_02_l",
+      "middle_03_l",
+      "middle_04_leaf_l",
+      "pinky_01_l",
+      "pinky_02_l",
+      "pinky_03_l",
+      "pinky_04_leaf_l",
+      "ring_01_l",
+      "ring_02_l",
+      "ring_03_l",
+      "ring_04_leaf_l",
+      "thumb_01_l",
+      "thumb_02_l",
+      "thumb_03_l",
+      "thumb_04_leaf_l",
+      "clavicle_r",
+      "upperarm_r",
+      "lowerarm_r",
+      "hand_r",
+      "index_01_r",
+      "index_02_r",
+      "index_03_r",
+      "index_04_leaf_r",
+      "middle_01_r",
+      "middle_02_r",
+      "middle_03_r",
+      "middle_04_leaf_r",
+      "pinky_01_r",
+      "pinky_02_r",
+      "pinky_03_r",
+      "pinky_04_leaf_r",
+      "ring_01_r",
+      "ring_02_r",
+      "ring_03_r",
+      "ring_04_leaf_r",
+      "thumb_01_r",
+      "thumb_02_r",
+      "thumb_03_r",
+      "thumb_04_leaf_r",
+      "thigh_l",
+      "calf_l",
+      "foot_l",
+      "ball_l",
+      "ball_leaf_l",
+      "thigh_r",
+      "calf_r",
+      "foot_r",
+      "ball_r",
+      "ball_leaf_r"
+    ],
+    "deform_bones": [
+      "root",
+      "pelvis",
+      "spine_01",
+      "spine_02",
+      "spine_03",
+      "neck_01",
+      "Head",
+      "clavicle_l",
+      "upperarm_l",
+      "lowerarm_l",
+      "hand_l",
+      "index_01_l",
+      "index_02_l",
+      "index_03_l",
+      "index_04_leaf_l",
+      "middle_01_l",
+      "middle_02_l",
+      "middle_03_l",
+      "middle_04_leaf_l",
+      "pinky_01_l",
+      "pinky_02_l",
+      "pinky_03_l",
+      "pinky_04_leaf_l",
+      "ring_01_l",
+      "ring_02_l",
+      "ring_03_l",
+      "ring_04_leaf_l",
+      "thumb_01_l",
+      "thumb_02_l",
+      "thumb_03_l",
+      "thumb_04_leaf_l",
+      "clavicle_r",
+      "upperarm_r",
+      "lowerarm_r",
+      "hand_r",
+      "index_01_r",
+      "index_02_r",
+      "index_03_r",
+      "index_04_leaf_r",
+      "middle_01_r",
+      "middle_02_r",
+      "middle_03_r",
+      "middle_04_leaf_r",
+      "pinky_01_r",
+      "pinky_02_r",
+      "pinky_03_r",
+      "pinky_04_leaf_r",
+      "ring_01_r",
+      "ring_02_r",
+      "ring_03_r",
+      "ring_04_leaf_r",
+      "thumb_01_r",
+      "thumb_02_r",
+      "thumb_03_r",
+      "thumb_04_leaf_r",
+      "thigh_l",
+      "calf_l",
+      "foot_l",
+      "ball_l",
+      "ball_leaf_l",
+      "thigh_r",
+      "calf_r",
+      "foot_r",
+      "ball_r",
+      "ball_leaf_r"
+    ],
+    "vertex_influence_count_histogram": {
+      "1": 2259,
+      "4": 1013,
+      "3": 876,
+      "2": 4335,
+      "0": 42
+    },
+    "texture_images": [
+      {
+        "name": "Render Result",
+        "pixels": [
+          0,
+          0
+        ],
+        "filepath": ""
+      },
+      {
+        "name": "T_Eye_Brown",
+        "pixels": [
+          256,
+          256
+        ],
+        "filepath": "C:\\Users\\ous\\AppData\\Local\\Temp\\motionboard-mb005a-inspect-1\\Universal Base Characters[Standard]\\Base Characters\\Godot - UE\\T_Eye_Brown.png"
+      },
+      {
+        "name": "T_Eye_Normal.png",
+        "pixels": [
+          0,
+          0
+        ],
+        "filepath": "C:\\Users\\ous\\AppData\\Local\\Temp\\motionboard-mb005a-inspect-1\\Universal Base Characters[Standard]\\Base Characters\\Godot - UE\\T_Eye_Normal_png.png"
+      },
+      {
+        "name": "T_Hair_1_BaseColor",
+        "pixels": [
+          2048,
+          2048
+        ],
+        "filepath": "C:\\Users\\ous\\AppData\\Local\\Temp\\motionboard-mb005a-inspect-1\\Universal Base Characters[Standard]\\Base Characters\\Godot - UE\\T_Hair_1_BaseColor.png"
+      },
+      {
+        "name": "T_Hair_1_Normal.png",
+        "pixels": [
+          0,
+          0
+        ],
+        "filepath": "C:\\Users\\ous\\AppData\\Local\\Temp\\motionboard-mb005a-inspect-1\\Universal Base Characters[Standard]\\Base Characters\\Godot - UE\\T_Hair_1_Normal_png.png"
+      },
+      {
+        "name": "T_Superhero_Male_Dark",
+        "pixels": [
+          2048,
+          2048
+        ],
+        "filepath": "C:\\Users\\ous\\AppData\\Local\\Temp\\motionboard-mb005a-inspect-1\\Universal Base Characters[Standard]\\Base Characters\\Godot - UE\\T_Superhero_Male_Dark.png"
+      },
+      {
+        "name": "T_Superhero_Male_Normal",
+        "pixels": [
+          2048,
+          2048
+        ],
+        "filepath": "C:\\Users\\ous\\AppData\\Local\\Temp\\motionboard-mb005a-inspect-1\\Universal Base Characters[Standard]\\Base Characters\\Godot - UE\\T_Superhero_Male_Normal.png"
+      },
+      {
+        "name": "T_Superhero_Male_Roughness",
+        "pixels": [
+          2048,
+          2048
+        ],
+        "filepath": "C:\\Users\\ous\\AppData\\Local\\Temp\\motionboard-mb005a-inspect-1\\Universal Base Characters[Standard]\\Base Characters\\Godot - UE\\T_Superhero_Male_Roughness.png"
+      },
+      {
+        "name": "Viewer Node",
+        "pixels": [
+          256,
+          256
+        ],
+        "filepath": ""
+      }
+    ],
+    "bounds_min": [
+      -0.9510578513145447,
+      -0.9999999403953552,
+      -1.0
+    ],
+    "bounds_max": [
+      0.9510578513145447,
+      0.9999999403953552,
+      1.8100765943527222
+    ],
+    "dimensions": [
+      1.9021157026290894,
+      1.9999998807907104,
+      2.810076594352722
+    ],
+    "animation_actions": [],
+    "articulation_pose_bones_changed": [
+      {
+        "bone": "upperarm_l",
+        "x_degrees": 25
+      },
+      {
+        "bone": "lowerarm_l",
+        "x_degrees": -35
+      },
+      {
+        "bone": "hand_l",
+        "x_degrees": 25
+      },
+      {
+        "bone": "upperarm_r",
+        "x_degrees": 25
+      },
+      {
+        "bone": "lowerarm_r",
+        "x_degrees": -35
+      },
+      {
+        "bone": "thigh_l",
+        "x_degrees": 25
+      },
+      {
+        "bone": "calf_l",
+        "x_degrees": -35
+      },
+      {
+        "bone": "foot_l",
+        "x_degrees": 25
+      },
+      {
+        "bone": "thigh_r",
+        "x_degrees": 25
+      },
+      {
+        "bone": "calf_r",
+        "x_degrees": -35
+      }
+    ],
+    "blender_dimensions": [
+      1.9021157026290894,
+      1.9999998807907104,
+      2.8100767135620117
+    ],
+    "test_glb": "D:\\andalouse app\\assets\\test-only\\quaternius-universal-base-characters\\quaternius-male-standard-test.glb"
+  },
+  "female": {
+    "meshes": [
+      "Eyebrows",
+      "Eyes",
+      "Superhero_Female",
+      "Icosphere",
+      "Icosphere.001"
+    ],
+    "mesh_count": 5,
+    "vertices": 8928,
+    "triangles": 15220,
+    "materials": [
+      "MI_Eyes.001",
+      "MI_Hair_2",
+      "MI_Superhero_Female"
+    ],
+    "material_count": 3,
+    "armature_count": 1,
+    "bones": [
+      "root",
+      "pelvis",
+      "spine_01",
+      "spine_02",
+      "spine_03",
+      "neck_01",
+      "Head",
+      "clavicle_l",
+      "upperarm_l",
+      "lowerarm_l",
+      "hand_l",
+      "index_01_l",
+      "index_02_l",
+      "index_03_l",
+      "index_04_leaf_l",
+      "middle_01_l",
+      "middle_02_l",
+      "middle_03_l",
+      "middle_04_leaf_l",
+      "pinky_01_l",
+      "pinky_02_l",
+      "pinky_03_l",
+      "pinky_04_leaf_l",
+      "ring_01_l",
+      "ring_02_l",
+      "ring_03_l",
+      "ring_04_leaf_l",
+      "thumb_01_l",
+      "thumb_02_l",
+      "thumb_03_l",
+      "thumb_04_leaf_l",
+      "clavicle_r",
+      "upperarm_r",
+      "lowerarm_r",
+      "hand_r",
+      "index_01_r",
+      "index_02_r",
+      "index_03_r",
+      "index_04_leaf_r",
+      "middle_01_r",
+      "middle_02_r",
+      "middle_03_r",
+      "middle_04_leaf_r",
+      "pinky_01_r",
+      "pinky_02_r",
+      "pinky_03_r",
+      "pinky_04_leaf_r",
+      "ring_01_r",
+      "ring_02_r",
+      "ring_03_r",
+      "ring_04_leaf_r",
+      "thumb_01_r",
+      "thumb_02_r",
+      "thumb_03_r",
+      "thumb_04_leaf_r",
+      "thigh_l",
+      "calf_l",
+      "foot_l",
+      "ball_l",
+      "ball_leaf_l",
+      "thigh_r",
+      "calf_r",
+      "foot_r",
+      "ball_r",
+      "ball_leaf_r"
+    ],
+    "deform_bones": [
+      "root",
+      "pelvis",
+      "spine_01",
+      "spine_02",
+      "spine_03",
+      "neck_01",
+      "Head",
+      "clavicle_l",
+      "upperarm_l",
+      "lowerarm_l",
+      "hand_l",
+      "index_01_l",
+      "index_02_l",
+      "index_03_l",
+      "index_04_leaf_l",
+      "middle_01_l",
+      "middle_02_l",
+      "middle_03_l",
+      "middle_04_leaf_l",
+      "pinky_01_l",
+      "pinky_02_l",
+      "pinky_03_l",
+      "pinky_04_leaf_l",
+      "ring_01_l",
+      "ring_02_l",
+      "ring_03_l",
+      "ring_04_leaf_l",
+      "thumb_01_l",
+      "thumb_02_l",
+      "thumb_03_l",
+      "thumb_04_leaf_l",
+      "clavicle_r",
+      "upperarm_r",
+      "lowerarm_r",
+      "hand_r",
+      "index_01_r",
+      "index_02_r",
+      "index_03_r",
+      "index_04_leaf_r",
+      "middle_01_r",
+      "middle_02_r",
+      "middle_03_r",
+      "middle_04_leaf_r",
+      "pinky_01_r",
+      "pinky_02_r",
+      "pinky_03_r",
+      "pinky_04_leaf_r",
+      "ring_01_r",
+      "ring_02_r",
+      "ring_03_r",
+      "ring_04_leaf_r",
+      "thumb_01_r",
+      "thumb_02_r",
+      "thumb_03_r",
+      "thumb_04_leaf_r",
+      "thigh_l",
+      "calf_l",
+      "foot_l",
+      "ball_l",
+      "ball_leaf_l",
+      "thigh_r",
+      "calf_r",
+      "foot_r",
+      "ball_r",
+      "ball_leaf_r"
+    ],
+    "vertex_influence_count_histogram": {
+      "1": 2897,
+      "3": 1026,
+      "2": 3932,
+      "4": 989,
+      "0": 84
+    },
+    "texture_images": [
+      {
+        "name": "Render Result",
+        "pixels": [
+          0,
+          0
+        ],
+        "filepath": ""
+      },
+      {
+        "name": "T_Eye_Brown",
+        "pixels": [
+          256,
+          256
+        ],
+        "filepath": "C:\\Users\\ous\\AppData\\Local\\Temp\\motionboard-mb005a-inspect-1\\Universal Base Characters[Standard]\\Base Characters\\Godot - UE\\T_Eye_Brown.png"
+      },
+      {
+        "name": "T_Eye_Normal.png",
+        "pixels": [
+          0,
+          0
+        ],
+        "filepath": "C:\\Users\\ous\\AppData\\Local\\Temp\\motionboard-mb005a-inspect-1\\Universal Base Characters[Standard]\\Base Characters\\Godot - UE\\T_Eye_Normal_png.png"
+      },
+      {
+        "name": "T_Eye_Normal.png.001",
+        "pixels": [
+          0,
+          0
+        ],
+        "filepath": "C:\\Users\\ous\\AppData\\Local\\Temp\\motionboard-mb005a-inspect-1\\Universal Base Characters[Standard]\\Base Characters\\Godot - UE\\T_Eye_Normal_png.png"
+      },
+      {
+        "name": "T_Hair_1_BaseColor",
+        "pixels": [
+          2048,
+          2048
+        ],
+        "filepath": "C:\\Users\\ous\\AppData\\Local\\Temp\\motionboard-mb005a-inspect-1\\Universal Base Characters[Standard]\\Base Characters\\Godot - UE\\T_Hair_1_BaseColor.png"
+      },
+      {
+        "name": "T_Hair_1_Normal.png",
+        "pixels": [
+          0,
+          0
+        ],
+        "filepath": "C:\\Users\\ous\\AppData\\Local\\Temp\\motionboard-mb005a-inspect-1\\Universal Base Characters[Standard]\\Base Characters\\Godot - UE\\T_Hair_1_Normal_png.png"
+      },
+      {
+        "name": "T_Hair_2_BaseColor",
+        "pixels": [
+          2048,
+          2048
+        ],
+        "filepath": "C:\\Users\\ous\\AppData\\Local\\Temp\\motionboard-mb005a-inspect-1\\Universal Base Characters[Standard]\\Base Characters\\Godot - UE\\T_Hair_2_BaseColor.png"
+      },
+      {
+        "name": "T_Hair_2_Normal",
+        "pixels": [
+          2048,
+          2048
+        ],
+        "filepath": "C:\\Users\\ous\\AppData\\Local\\Temp\\motionboard-mb005a-inspect-1\\Universal Base Characters[Standard]\\Base Characters\\Godot - UE\\T_Hair_2_Normal.png"
+      },
+      {
+        "name": "T_Superhero_Female_Dark_BaseColor",
+        "pixels": [
+          2048,
+          2048
+        ],
+        "filepath": "C:\\Users\\ous\\AppData\\Local\\Temp\\motionboard-mb005a-inspect-1\\Universal Base Characters[Standard]\\Base Characters\\Godot - UE\\T_Superhero_Female_Dark_BaseColor.png"
+      },
+      {
+        "name": "T_Superhero_Female_Normal",
+        "pixels": [
+          2048,
+          2048
+        ],
+        "filepath": "C:\\Users\\ous\\AppData\\Local\\Temp\\motionboard-mb005a-inspect-1\\Universal Base Characters[Standard]\\Base Characters\\Godot - UE\\T_Superhero_Female_Normal.png"
+      },
+      {
+        "name": "T_Superhero_Female_Roughness",
+        "pixels": [
+          2048,
+          2048
+        ],
+        "filepath": "C:\\Users\\ous\\AppData\\Local\\Temp\\motionboard-mb005a-inspect-1\\Universal Base Characters[Standard]\\Base Characters\\Godot - UE\\T_Superhero_Female_Roughness.png"
+      },
+      {
+        "name": "T_Superhero_Male_Dark",
+        "pixels": [
+          2048,
+          2048
+        ],
+        "filepath": "C:\\Users\\ous\\AppData\\Local\\Temp\\motionboard-mb005a-inspect-1\\Universal Base Characters[Standard]\\Base Characters\\Godot - UE\\T_Superhero_Male_Dark.png"
+      },
+      {
+        "name": "T_Superhero_Male_Normal",
+        "pixels": [
+          2048,
+          2048
+        ],
+        "filepath": "C:\\Users\\ous\\AppData\\Local\\Temp\\motionboard-mb005a-inspect-1\\Universal Base Characters[Standard]\\Base Characters\\Godot - UE\\T_Superhero_Male_Normal.png"
+      },
+      {
+        "name": "T_Superhero_Male_Roughness",
+        "pixels": [
+          2048,
+          2048
+        ],
+        "filepath": "C:\\Users\\ous\\AppData\\Local\\Temp\\motionboard-mb005a-inspect-1\\Universal Base Characters[Standard]\\Base Characters\\Godot - UE\\T_Superhero_Male_Roughness.png"
+      },
+      {
+        "name": "Viewer Node",
+        "pixels": [
+          256,
+          256
+        ],
+        "filepath": ""
+      }
+    ],
+    "bounds_min": [
+      -0.9510578513145447,
+      -0.9999999403953552,
+      -1.0
+    ],
+    "bounds_max": [
+      0.9510578513145447,
+      0.9999999403953552,
+      1.7666435241699219
+    ],
+    "dimensions": [
+      1.9021157026290894,
+      1.9999998807907104,
+      2.766643524169922
+    ],
+    "animation_actions": [],
+    "articulation_pose_bones_changed": [
+      {
+        "bone": "upperarm_l",
+        "x_degrees": 25
+      },
+      {
+        "bone": "lowerarm_l",
+        "x_degrees": -35
+      },
+      {
+        "bone": "hand_l",
+        "x_degrees": 25
+      },
+      {
+        "bone": "upperarm_r",
+        "x_degrees": 25
+      },
+      {
+        "bone": "lowerarm_r",
+        "x_degrees": -35
+      },
+      {
+        "bone": "thigh_l",
+        "x_degrees": 25
+      },
+      {
+        "bone": "calf_l",
+        "x_degrees": -35
+      },
+      {
+        "bone": "foot_l",
+        "x_degrees": 25
+      },
+      {
+        "bone": "thigh_r",
+        "x_degrees": 25
+      },
+      {
+        "bone": "calf_r",
+        "x_degrees": -35
+      }
+    ],
+    "blender_dimensions": [
+      1.9021157026290894,
+      1.9999998807907104,
+      2.766643524169922
+    ]
+  }
+}

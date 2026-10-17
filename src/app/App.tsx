@@ -12,6 +12,7 @@ const TEST_ASSET_PATHS = {
   'rigged-simple': '/assets/test-only/RiggedSimple.glb',
   'robot-expressive': '/assets/test-only/RobotExpressive.glb',
   'mpfb2-rig-probe': '/assets/test-only/mb004b-rig-probe.glb',
+  'quaternius-male': '/assets/test-only/quaternius-universal-base-characters/quaternius-male-standard-test.glb',
   schoolboy: '/assets/characters/schoolboy-v0.1.0.glb',
   'schoolboy-v020': '/assets/characters/schoolboy-v0.2.0.glb',
 } as const;
@@ -261,6 +262,7 @@ export function App() {
                   <option value="fox">Fox.glb</option>
                   <option value="rigged-simple">RiggedSimple.glb</option>
                   <option value="mpfb2-rig-probe">mb004b-rig-probe.glb (non-educational rig probe)</option>
+                  <option value="quaternius-male">Quaternius male standard test (CC0, non-educational)</option>
                   <option value="schoolboy">schoolboy-v0.1.0.glb (draft)</option>
                   <option value="schoolboy-v020">schoolboy-v0.2.0.glb (rejected exploration)</option>
                 </select>
