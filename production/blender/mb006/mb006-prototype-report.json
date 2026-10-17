@@ -1,0 +1,72 @@
+{
+  "status": "PARTIAL — editable anatomy/face prototype; visual approval pending",
+  "blender_version": "5.2.2 LTS",
+  "base_file": "production/blender/mpfb2-feasibility/mpfb2-child-anchor-feasibility.blend",
+  "base_license": "MPFB2 bundled core geometry and targets, CC0; see MB-004A report",
+  "mesh_vertices": 19158,
+  "mesh_edges": 37364,
+  "mesh_faces": 18486,
+  "modifiers_preserved": [
+    "ARMATURE",
+    "MASK"
+  ],
+  "shape_key": "MB006_LocalAnatomy_Prototype",
+  "local_change_parameters": {
+    "shoulder_band_width_peak": 0.075,
+    "upper_chest_width_peak": 0.025,
+    "waist_width_peak": -0.045,
+    "pelvis_width_peak": -0.035,
+    "neck_depth_peak": 0.035,
+    "cheek_width_peak": 0.025,
+    "lower_jaw_width_peak": -0.02,
+    "finger_extension": 0.035,
+    "forefoot_length_extension": 0.025
+  },
+  "scene_scale_context_m": 1.292,
+  "baseline_scene_height_m": 1.0053783655166626,
+  "armature_uniform_context_scale": 1.2850883252655263,
+  "age_suitability_claim": "None; one record is used only to set scene scale, not establish age suitability.",
+  "evaluated_bounds_scene_units": {
+    "min": [
+      -0.38650307059288025,
+      -0.2707065939903259,
+      -3.5763211059247624e-08
+    ],
+    "max": [
+      0.38650307059288025,
+      0.06301049143075943,
+      1.2919999361038208
+    ],
+    "height": 1.2919999718670319
+  },
+  "reference_record": {
+    "source": "NIST/CPSC AnthroKids 1977, MB-004B Candidate 02",
+    "age_band_months": "96–107",
+    "stature_m": 1.292,
+    "head_stature": 0.144,
+    "sitting_height_stature": 0.5333,
+    "shoulder_breadth_stature": 0.2446,
+    "shoulder_elbow_stature": 0.2051,
+    "elbow_hand_stature": 0.2655,
+    "hand_stature": 0.1068,
+    "foot_stature": 0.1563,
+    "caveat": "One record used for context only; not a medical norm or Algerian child template."
+  },
+  "renders": [
+    "mb006-front.png",
+    "mb006-side.png",
+    "mb006-rear.png",
+    "mb006-three-quarter.png",
+    "mb006-face-closeup.png",
+    "mb006-full-body-neutral.png"
+  ],
+  "known_limits": [
+    "No age-specific or Algerian-specific age validation.",
+    "No external hair, eyes, skin texture, clothing, footwear, or flag assets were added.",
+    "The face is a neutral MPFB base with only small local cheek/jaw edits; professional sculpt review is required.",
+    "No local edits were made to limb lengths or joint locations; those remain unvalidated for child proportions.",
+    "Existing 784 boundary edges and four-influence deformation limitation remain; this task did not repair them.",
+    "The standard MPFB rest pose is an A-pose and has not been signed off as a production neutral pose.",
+    "Visual and rig approval remain pending Product Owner and character-artist review."
+  ]
+}
